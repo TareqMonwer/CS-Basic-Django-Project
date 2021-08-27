@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Django Concepts</title>
+</head>
+<body>
+    <h1>Hello! Welcome to our very first Django lesson.</h1>
+
+    <h1>
+        <a href="{% url 'articles:articles' %}">Read Our Articles</a>
+    </h1>
+
+    <h2>Surprise! We have {{ fruit }} for you!</h2>
+
+    <p>{{ request.user.is_authenticated | default:"You are not logged in" }}</p>
+</body>
+</html>
