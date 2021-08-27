@@ -1,9 +1,9 @@
 from django.shortcuts import render
+from articles.utils import get_articles
 
 
 def articles(request):
-    articles_list = [('Article Number' + str(_)) for _ in range(10)]
     context = {
-        'articles': articles_list
+        'articles': get_articles()
     }
     return render(request, 'articles/articles.html', context)
