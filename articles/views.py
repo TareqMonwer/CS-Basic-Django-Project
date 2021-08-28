@@ -1,9 +1,9 @@
 from django.shortcuts import render
-from articles.utils import get_articles
+from articles.utils import get_json_articles
 
 
 def articles(request):
     context = {
-        'articles': get_articles()
+        'articles': get_json_articles()
     }
-    return render(request, 'articles/articles.html', context)
+    return render(request, 'articles/index.html', context)
